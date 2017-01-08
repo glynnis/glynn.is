@@ -1,25 +1,28 @@
 # Jekyll config file
 
-title: whiskey
-url: "http://cboettig.github.io/whiskey"
-baseurl: "/whiskey"
+title: Glynnis Ritchie | UX Designer
+url: "http://glynn.is/"
+baseurl: "/"
 locale: en
-logo: "logo.png"
 analytics: none
 
 navigation:  
   - title: Home
     url: #
-  - title: cards example 
-    url: /cards_example.html
+  - title: Work
+    url: #
+  - title: About
+    url: #
+  - title: Resume
+    url: #
   - title: Contact
     url: #
 
 author:
-  name: "First Last"
-  email: "person@example.com"
-  twitter: example
-  github: example
-  givenName: First
-  familyName: Last
+  name: "Glynnis Ritchie"
+  email: "glynnis.ritchie@gmail.com"
+  twitter: glynnisritchie
+  github: glynnis
+  givenName: Glynnis
+  familyName: Ritchie
 
