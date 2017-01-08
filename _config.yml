@@ -1,0 +1,25 @@
+# Jekyll config file
+
+title: whiskey
+url: "http://cboettig.github.io/whiskey"
+baseurl: "/whiskey"
+locale: en
+logo: "logo.png"
+analytics: none
+
+navigation:  
+  - title: Home
+    url: #
+  - title: cards example 
+    url: /cards_example.html
+  - title: Contact
+    url: #
+
+author:
+  name: "First Last"
+  email: "person@example.com"
+  twitter: example
+  github: example
+  givenName: First
+  familyName: Last
+
