@@ -1,3 +1,5 @@
+$large-screen: 900px;
+
 body {
   color: $base-font-color;
   font-family: $base-font-family;
@@ -46,4 +48,24 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+// Header styles
+.page-title {
+  font-family: $serif-font-family;
+  font-size: 2.3em;
+  font-weight: 100;
+  color: $blue-500;
+  @include media ($large-screen) {
+    font-size: 3em;
+  }
+}
+
+.sub-header {
+  font-family: $base-font-family;
+  font-weight: 600;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  color: $green-700;
+  letter-spacing: 1px;
 }

@@ -14,7 +14,6 @@ header.navigation {
   $horizontal-bar-mode: $large-screen;
 
   background-color: $navigation-background;
-  min-height: $navigation-height;
   border-top: 15px solid $green-500;
   width: 100%;
   z-index: 999;
@@ -64,11 +63,11 @@ header.navigation {
 
   nav {
     float: none;
-    min-height: $navigation-height;
     z-index: 9999999;
     text-transform: uppercase;
 
     @include media ($horizontal-bar-mode) {
+      min-height: $navigation-height;
       padding-top: 1em;
       float: right;
     }
