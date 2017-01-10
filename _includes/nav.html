@@ -1,9 +1,7 @@
 <header class="navigation" role="banner">
   <div class="navigation-wrapper">
-    <a href="#" class="logo">
-      <img src="img/{{site.logo}}" alt="logo">
-    </a>
-    <a href="#" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+    <div class="nav-name">Glynnis Ritchie</div>
+    <a href="#" class="navigation-menu-button" id="js-mobile-menu">Menu</a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
         {% for link in site.navigation %}
@@ -19,16 +17,5 @@
         {% endfor %}
       </ul>
     </nav>
-    <div class="navigation-tools">
-      <div class="search-bar">
-        <form role="search" method="get" action="http://google.com/search">
-          <input type="hidden" name="q" value="site:{{site.url}}" />
-          <input type="search" placeholder="Enter Search" />
-          <button type="submit">
-            <i class="fa fa-search"></i>
-          </button>
-        </form>
-      </div>
-    </div>
   </div>
 </header>
