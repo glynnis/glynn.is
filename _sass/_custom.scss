@@ -7,3 +7,53 @@ section {
 body {
   margin:0;
 }
+
+// About page
+.about-body {
+  padding-top: 0.6em;
+  @include span-columns(5);
+}
+
+.about-lists {
+  @include span-columns(5);
+  @include shift(1);
+  ul {
+    list-style-type: disc;
+    margin-bottom: $base-spacing;
+    padding-left: $base-spacing;
+  }
+}
+
+.pull-quote-wide {
+  margin: $base-spacing 0;
+
+  blockquote {
+    font-family: $quote-font-family;
+    font-size: 2em;
+    @include clearfix;
+    @include outer-container;
+    position: relative;
+    margin: $base-spacing / 2;
+
+    &::before {
+      font-family: $serif-font-family;
+      color: $blue-500;
+      position: absolute;
+      font-size: 4em;
+      top: -0.85em;
+      left: -0.5em;
+      opacity: 0.15;
+      content: "\201C";
+    }
+  }
+
+  .endorsement-author {
+    @extend .sub-header;
+    text-align: right;
+    padding-right: $base-spacing;
+  }
+}
+
+.photo-banner {
+  padding: 2em 0 5em;
+}
