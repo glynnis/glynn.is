@@ -1,6 +1,9 @@
+$large-screen: 900px;
+
 section {
+  padding: $base-spacing;
   @include outer-container;
-  aside { @include span-columns(3); }
+  aside { @include span-columns(5); }
   article { @include span-columns(9); }
 }
 
@@ -11,29 +14,42 @@ body {
 // About page
 .about-body {
   padding-top: 0.6em;
-  @include span-columns(5);
+
+  @include media ($large-screen) {
+    @include span-columns(5);
+  }
 }
 
 .about-lists {
-  @include span-columns(5);
-  @include shift(1);
+  padding-top: $base-spacing;
+
   ul {
     list-style-type: disc;
     margin-bottom: $base-spacing;
     padding-left: $base-spacing;
   }
+
+  @include media ($large-screen) {
+    @include shift(1);
+    @include span-columns(5);
+    padding-top: 0;
+  }
+
 }
 
 .pull-quote-wide {
-  margin: $base-spacing 0;
-
   blockquote {
-    font-family: $quote-font-family;
-    font-size: 2em;
     @include clearfix;
     @include outer-container;
+    font-family: $quote-font-family;
+    font-size: 1.4em;
     position: relative;
-    margin: $base-spacing / 2;
+    margin: 0 2em;
+
+    @include media ($large-screen) {
+      margin: $base-spacing;
+      font-size: 2em;
+    }
 
     &::before {
       font-family: $serif-font-family;
@@ -50,7 +66,13 @@ body {
   .endorsement-author {
     @extend .sub-header;
     text-align: right;
-    padding-right: $base-spacing;
+    padding-top: 1em;
+
+    @include media ($large-screen) {
+      text-align: right;
+      padding-right: $base-spacing;
+      padding-top: 0;
+    }
   }
 }
 
