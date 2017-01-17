@@ -1,15 +1,102 @@
 $large-screen: 900px;
 
 section {
-  padding: $base-spacing;
+  padding: 1em 1em 0;
   @include outer-container;
   aside { @include span-columns(5); }
   article { @include span-columns(9); }
+	@include media ($large-screen) {
+		.column-1 {
+      @include span-columns(5);
+		}
+
+		.column-2 {
+      @include shift(1);
+      @include span-columns(5);
+		}
+  }
 }
 
 body {
   margin:0;
 }
+
+// Case Studies
+.case-study-hero {
+  .page-title {
+    height: 1em;
+    margin-top: -0.6em;
+  }
+
+  img {
+    max-width: 45em;
+    margin-bottom: 2.5em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.25);
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    color: $blue-100;
+    background-color: $blue-100;
+    margin: 0;
+		@include media ($large-screen) {
+			@include span-columns(3);
+		}
+  }
+}
+
+.case-study-summary {
+  font-size: 1.3em;
+}
+
+.case-study-metadata {
+  @include clearfix;
+  p {
+    margin: 0 0 2em;
+  }
+
+  padding-top: 2em;
+  @include media ($large-screen) {
+		.column-1 {
+      @include span-columns(4);
+		}
+
+		.column-2 {
+      @include span-columns(4);
+		}
+  }
+}
+
+.case-study {
+  @include clearfix;
+  ul {
+    list-style-type: disc;
+    margin-bottom: $base-spacing;
+    padding-left: $base-spacing;
+  }
+
+  @include media ($large-screen) {
+    @include span-columns(7);
+  }
+
+  img {
+    width: 38em;
+    max-width: 100%;
+    margin: 0.7em 0;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.25);
+  }
+
+  h3 {
+    margin: 2em 0 0.75em 0;
+  }
+
+  .pull-quote-wide blockquote {
+    margin: 0.8em 1.5em;
+  }
+
+}
+
 
 // About page
 .about-body {
