@@ -2,21 +2,21 @@
 
 title: Glynnis Ritchie | UX Designer
 url: "http://glynn.is/"
-baseurl: "/"
+baseurl: ""
 locale: en
 analytics: none
 
 navigation:  
   - title: Home
-    url: #
+    url: /
   - title: Work
-    url: #
+    url: /index.html#work
   - title: About
-    url: about.html
+    url: /about.html
   - title: Resume
-    url: #
+    url: /glynnis_ritchie_resume.pdf
   - title: Contact
-    url: #
+    url: "mailto:glynnis.ritchie+site@gmail.com?subject=Hi there! I just checked out your site"
 
 author:
   name: "Glynnis Ritchie"
