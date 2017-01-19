@@ -24,25 +24,14 @@ body {
 // Homepage
 .home-hero {
   background-color: $blue-500;
-  section {
-    padding: 0 1em 0;
-  }
-
-  .background-image {
-    background-image: url(../img/hero_home.png);
-    height: 20em;
-    z-index: 1;
-    position: relative;
-  }
+	min-height: 20em;
+	background: linear-gradient(60deg, $blue-500, transparent), linear-gradient(58deg, $blue-500, transparent), url(../img/hero.png) right 40% no-repeat;
+	background-blend-mode: normal;
 
   .text-wrapper {
-    position: absolute;
-    top: 9em;
-    z-index: 100;
-    width: 38em;
 
 		h1 {
-			color: $blue-700;
+			color: #00232C;
 			font-family: $serif-font-family;
 			font-size: 2em;
       line-height: 1.4;
@@ -56,8 +45,17 @@ body {
       line-height: 1.5;
 		}
 
+		@include media (675px) {
+      @include span-columns(8);
+
+			h1 {
+				color: $blue-700;
+      }
+    }
+
 		@include media ($large-screen) {
       @include clearfix;
+      @include span-columns(8);
 		}
   }
 }
