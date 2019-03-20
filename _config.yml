@@ -1,12 +1,13 @@
 # Jekyll config file
 
-title: Glynnis Ritchie | UX Designer
+title: Glynnis Ritchie | Product Designer
+description: ""
 url: "http://glynn.is/"
 baseurl: ""
 locale: en
 analytics: none
 
-navigation:  
+navigation:
   - title: Home
     url: /
   - title: Work
