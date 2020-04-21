@@ -20,14 +20,13 @@ body {
   margin:0;
 }
 
-// Navigation
-// empty
-
 // Homepage
 .home-hero {
   img {
     max-width: 130px;
+    margin-bottom: 1.3em;
     @include media ($large-screen) {
+      margin: 0;
       @include span-columns(2 of 12);
     }
   }
@@ -65,7 +64,10 @@ body {
 .skills {
   background: rgb(30,28,74);
   background: linear-gradient(31deg, rgba(30,28,74,1) 0%, rgba(43,40,107,1) 100%);
-  padding: 3em;
+  padding: 2em 0;
+  @include media ($large-screen) {
+    padding: 3em;
+  }
 
   .section-title {
     color: white;
