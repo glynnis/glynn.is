@@ -256,7 +256,7 @@ body {
 // Case Studies
 .case-study-hero {
   .page-title {
-    margin-top: -0.6em;
+    margin: 0 0 0.2em;
   }
 
   img {
@@ -321,6 +321,10 @@ body {
 
   .pull-quote-wide blockquote {
     margin: 0.8em 1.5em;
+  }
+
+  p, li, h3 {
+    font-size: 1.2em;
   }
 
 }
