@@ -370,3 +370,16 @@ body {
 .photo-banner {
   padding: 2em 0 5em;
 }
+
+// Footer
+.footer ul li a {
+  color: $blue-100;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $blue-200;
+  }
+}
