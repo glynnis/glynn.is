@@ -22,6 +22,7 @@ h6 {
 
 p {
   margin: 0 0 $small-spacing;
+  font-size: 1.2em;
 }
 
 a {
@@ -52,9 +53,9 @@ picture {
 
 // Header styles
 .page-title {
-  font-family: $serif-font-family;
+  font-family: $base-font-family;
   font-size: 2.3em;
-  font-weight: 100;
+  font-weight: 900;
   color: $blue-500;
   @include media ($large-screen) {
     font-size: 3em;
@@ -62,9 +63,11 @@ picture {
 }
 
 .section-title {
-  font-family: $serif-font-family;
+  font-family: $heading-font-family;
   font-size: 1.8em;
-  font-weight: 100;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   color: $blue-500;
 }
 

@@ -5,15 +5,14 @@ section {
   @include outer-container;
   aside { @include span-columns(5); }
   article { @include span-columns(9); }
-	@include media ($large-screen) {
-		.column-1 {
+  @include media ($large-screen) {
+    .column-1 {
       @include span-columns(5);
-		}
-
-		.column-2 {
+    }
+    .column-2 {
       @include shift(1);
       @include span-columns(5);
-		}
+    }
   }
 }
 
@@ -23,53 +22,102 @@ body {
 
 // Homepage
 .home-hero {
-  background-color: $blue-500;
-	min-height: 20em;
-	background: linear-gradient(60deg, $blue-500, transparent), linear-gradient(58deg, $blue-500, transparent), url(../img/hero.png) right 40% no-repeat;
-	background-blend-mode: normal;
-
-  .text-wrapper {
-
-		h1 {
-			color: #00232C;
-			font-family: $serif-font-family;
-			font-size: 2em;
-      line-height: 1.4;
-		}
-
-		h2 {
-			color: white;
-			font-family: $base-font-family;
-			font-size: 1.5em;
-			font-weight: 100;
-      line-height: 1.5;
-		}
-
-		@include media (675px) {
-      @include span-columns(8);
-
-			h1 {
-				color: $blue-700;
-      }
+  img {
+    max-width: 130px;
+    margin-bottom: 1.3em;
+    @include media ($large-screen) {
+      margin: 0;
+      @include span-columns(2 of 12);
     }
-
-		@include media ($large-screen) {
-      @include clearfix;
-      @include span-columns(8);
-		}
   }
 }
 
+.home-hero-text {
+  @include media ($large-screen) {
+    @include shift(1);
+    @include span-columns(8 of 12);
+  }
+
+  h1 {
+    color: $blue-500;
+    font-family: $base-font-family;
+    font-size: 3em;
+    margin-bottom: 0.2em;
+  }
+
+  h2 {
+    color: $gray-500;
+    font-family: $quote-font-family;
+    font-weight: 100;
+    font-size: 2em;
+    margin: 0.6em 0 1.3em 0;
+  }
+
+  h3 {
+    color: $gray-500;
+    font-size: 1.4em;
+    font-weight: 100;
+    line-height: 1.4;
+    margin-bottom: 4em;
+  }
+}
+
+.skills {
+  background: rgb(30,28,74);
+  background: linear-gradient(31deg, rgba(30,28,74,1) 0%, rgba(43,40,107,1) 100%);
+  padding: 2em 0;
+  @include media ($large-screen) {
+    padding: 3em;
+  }
+
+  .section-title {
+    color: white;
+    font-weight: 600;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    @include media ($large-screen) {
+      @include span-columns(2 of 12);
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    color: $gray-200;
+    font-size: 1.6em;
+    @include media ($large-screen) {
+      @include shift(1);
+      @include span-columns(8 of 12);
+    }
+  }
+
+  .column-1 {
+    @include media ($large-screen) {
+      @include span-columns(4);
+    }
+  }
+
+  .column-2 {
+    @include media ($large-screen) {
+      @include span-columns(6);
+    }
+  }
+}
+
+
 .homepage {
+  margin: 2em 0;
   a {
-    color: $blue-100;
+    color: $blue-700;
+    text-decoration: underline;
+    font-weight: 600;
     &:hover, &:focus {
-      color: $blue-200;
+      color: $blue-500;
     }
   }
 
   section {
-		@include media ($large-screen) {
+    @include media ($large-screen) {
       margin-top: 3em;
     }
   }
@@ -77,20 +125,28 @@ body {
 
 .case-study-summary {
   @include clearfix;
-  padding-top: 1em;
+  padding-top: 2em;
+  h2 {
+    font-weight: 900;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 
   h3 {
-    font-family: $serif-font-family;
+    font-family: $base-font-family;
     color: $blue-500;
-    font-weight: 100;
-    font-size: 1.4em;
+    font-size: 3em;
+    font-weight: 600;
+    font-size: 2em;
+    margin-bottom: 0.3em;
   }
 
   h4 {
     font-weight: 100;
-    font-style: italic;
-    text-transform: uppercase;
-    color: $gray-200;
+    font-family: $quote-font-family;
+    font-size: 1.1em;
+    color: $gray-300;
   }
 
   img {
@@ -98,48 +154,48 @@ body {
     margin-bottom: 2.5em;
     box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.25);
 
-		@include media ($large-screen) {
-		  @include span-columns(4);
+    @include media ($large-screen) {
+      @include span-columns(4);
     }
   }
 
   button {
     color: white;
-    background: $blue-100;
+    background: $blue-700;
     padding: 0.5em 1em;
     text-transform: uppercase;
 
     &:hover, &:focus {
-      background: $blue-200;
+      background: $blue-500;
     }
   }
 
   .case-study-right-thumb-mobile {
-		@include media ($large-screen) {
-			@include shift(1);
+    @include media ($large-screen) {
+      @include shift(1);
       display: none;
-		}
+    }
   }
 
   .case-study-right-thumb {
     display: none;
-		@include media ($large-screen) {
-			@include shift(1);
+    @include media ($large-screen) {
+      @include shift(1);
       display: block;
-		}
+    }
   }
 }
 
 .case-study-left, .case-study-right {
-	@include media ($large-screen) {
-		@include span-columns(7);
-	}
+  @include media ($large-screen) {
+    @include span-columns(7);
+  }
 }
 
 .case-study-right {
-	@include media ($large-screen) {
+  @include media ($large-screen) {
     @include shift(1);
-	}
+  }
 }
 
 .endorsements {
@@ -175,7 +231,7 @@ body {
       color: $blue-500;
       position: absolute;
       font-size: 4em;
-      top: -0.85em;
+      top: -0.35em;
       left: -0.5em;
       opacity: 0.15;
       content: "\201C";
@@ -184,34 +240,14 @@ body {
 }
 
 .endorsement-author {
-	@extend .sub-header;
-	text-align: right;
-	padding-top: 1em;
+  @extend .sub-header;
+  text-align: right;
+  padding-top: 1em;
 
-	@include media ($large-screen) {
-		text-align: right;
-		padding-right: $base-spacing;
-		padding-top: 0;
-	}
-}
-
-.skills {
-  ul {
-    padding-left: 1em;
-    list-style-type: disc;
-  }
-
-  .column-1 {
-	  @include media ($large-screen) {
-      @include span-columns(4);
-    }
-  }
-
-  .column-2 {
-	  @include media ($large-screen) {
-      @include span-columns(6);
-      @include shift(1);
-    }
+  @include media ($large-screen) {
+    text-align: right;
+    padding-right: $base-spacing;
+    padding-top: 0;
   }
 }
 
@@ -220,7 +256,7 @@ body {
 // Case Studies
 .case-study-hero {
   .page-title {
-    margin-top: -0.6em;
+    margin: 0 0 0.2em;
   }
 
   img {
@@ -236,9 +272,9 @@ body {
     color: $blue-100;
     background-color: $blue-100;
     margin: 0;
-		@include media ($large-screen) {
-			@include span-columns(3);
-		}
+    @include media ($large-screen) {
+      @include span-columns(3);
+    }
   }
 }
 
@@ -250,13 +286,13 @@ body {
 
   padding-top: 2em;
   @include media ($large-screen) {
-		.column-1 {
+    .column-1 {
       @include span-columns(4);
-		}
+    }
 
-		.column-2 {
+    .column-2 {
       @include span-columns(4);
-		}
+    }
   }
 }
 
@@ -287,30 +323,44 @@ body {
     margin: 0.8em 1.5em;
   }
 
+  p, li, h3 {
+    font-size: 1.2em;
+  }
+
 }
 
 
 // About page
+.about-title {
+  color: $blue-500;
+  font-family: $base-font-family;
+  font-size: 3em;
+  margin-bottom: 0.2em;
+}
+
 .about-body {
   padding-top: 0.6em;
+  padding-bottom: 2em;
 
   @include media ($large-screen) {
-    @include span-columns(5);
+    @include span-columns(8);
   }
 }
 
 .about-lists {
-  padding-top: $base-spacing;
+  h2 {
+    font-size: 1.3em;
+  }
 
   ul {
+    font-size: 1em;
     list-style-type: disc;
     margin-bottom: $base-spacing;
     padding-left: $base-spacing;
   }
 
   @include media ($large-screen) {
-    @include shift(1);
-    @include span-columns(5);
+    @include span-columns(12);
     padding-top: 0;
   }
 
@@ -335,7 +385,7 @@ body {
       color: $blue-500;
       position: absolute;
       font-size: 4em;
-      top: -0.85em;
+      top: -0.3em;
       left: -0.5em;
       opacity: 0.15;
       content: "\201C";
@@ -345,4 +395,17 @@ body {
 
 .photo-banner {
   padding: 2em 0 5em;
+}
+
+// Footer
+.footer ul li a {
+  color: $blue-100;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $blue-200;
+  }
 }

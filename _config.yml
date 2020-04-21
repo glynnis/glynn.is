@@ -10,8 +10,8 @@ analytics: none
 navigation:
   - title: Home
     url: /
-  - title: Work
-    url: /index.html#work
+  - title: Case Studies
+    url: /index.html#case-studies
   - title: About
     url: /about.html
   - title: Contact
