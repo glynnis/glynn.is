@@ -50,6 +50,7 @@ body {
     font-family: $quote-font-family;
     font-weight: 100;
     font-size: 2em;
+    margin: 0.6em 0 1.3em 0;
   }
 
   h3 {
@@ -105,10 +106,13 @@ body {
 
 
 .homepage {
+  margin: 2em 0;
   a {
-    color: $blue-100;
+    color: $blue-700;
+    text-decoration: underline;
+    font-weight: 600;
     &:hover, &:focus {
-      color: $blue-200;
+      color: $blue-500;
     }
   }
 
@@ -121,20 +125,28 @@ body {
 
 .case-study-summary {
   @include clearfix;
-  padding-top: 1em;
+  padding-top: 2em;
+  h2 {
+    font-weight: 900;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 
   h3 {
-    font-family: $serif-font-family;
+    font-family: $base-font-family;
     color: $blue-500;
-    font-weight: 100;
-    font-size: 1.4em;
+    font-size: 3em;
+    font-weight: 600;
+    font-size: 2em;
+    margin-bottom: 0.3em;
   }
 
   h4 {
     font-weight: 100;
-    font-style: italic;
-    text-transform: uppercase;
-    color: $gray-200;
+    font-family: $quote-font-family;
+    font-size: 1.1em;
+    color: $gray-300;
   }
 
   img {
@@ -149,12 +161,12 @@ body {
 
   button {
     color: white;
-    background: $blue-100;
+    background: $blue-700;
     padding: 0.5em 1em;
     text-transform: uppercase;
 
     &:hover, &:focus {
-      background: $blue-200;
+      background: $blue-500;
     }
   }
 
@@ -219,7 +231,7 @@ body {
       color: $blue-500;
       position: absolute;
       font-size: 4em;
-      top: -0.85em;
+      top: -0.35em;
       left: -0.5em;
       opacity: 0.15;
       content: "\201C";
@@ -315,26 +327,36 @@ body {
 
 
 // About page
+.about-title {
+  color: $blue-500;
+  font-family: $base-font-family;
+  font-size: 3em;
+  margin-bottom: 0.2em;
+}
+
 .about-body {
   padding-top: 0.6em;
+  padding-bottom: 2em;
 
   @include media ($large-screen) {
-    @include span-columns(5);
+    @include span-columns(8);
   }
 }
 
 .about-lists {
-  padding-top: $base-spacing;
+  h2 {
+    font-size: 1.3em;
+  }
 
   ul {
+    font-size: 1em;
     list-style-type: disc;
     margin-bottom: $base-spacing;
     padding-left: $base-spacing;
   }
 
   @include media ($large-screen) {
-    @include shift(1);
-    @include span-columns(5);
+    @include span-columns(12);
     padding-top: 0;
   }
 
@@ -359,7 +381,7 @@ body {
       color: $blue-500;
       position: absolute;
       font-size: 4em;
-      top: -0.85em;
+      top: -0.3em;
       left: -0.5em;
       opacity: 0.15;
       content: "\201C";

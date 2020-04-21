@@ -64,7 +64,9 @@ picture {
 .section-title {
   font-family: $heading-font-family;
   font-size: 1.8em;
-  font-weight: 100;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   color: $blue-500;
 }
 
