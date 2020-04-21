@@ -8,9 +8,9 @@ header.navigation {
   $navigation-padding: 1em;
   $navigation-background: white;
   $navigation-color: $gray-500;
-  $navigation-color-hover: $blue-100;
+  $navigation-color-hover: $pink;
   $navigation-height: 60px;
-  $navigation-active-link-color: transparentize(white, 0.5);
+  $navigation-active-link-color: $pink;
   $horizontal-bar-mode: $large-screen;
 
   background-color: $navigation-background;
@@ -139,7 +139,7 @@ header.navigation {
       @include media ($horizontal-bar-mode) {
 	&:focus,
 	&:hover {
-	  border-bottom: 5px solid $blue-100;
+	  border-bottom: 5px solid $pink;
         }
       }
     }
